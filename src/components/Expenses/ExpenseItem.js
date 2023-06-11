@@ -6,18 +6,24 @@ import'./ExpenseItem.css';
 
 const ExpenseItem = (props) => {
 
+ 
+const styles = {
+  h2:{
+    display:"flex" , 
+    justifyContent:"centar"
+  }
+}
 
   return (
+    <li>
 <Card className="expense-item">
    <ExpenseDate date={props.date}/>
+   
     <div className='expence-item__description'>
-        <h2>{props.title}</h2>
+        <h2 style={styles.h2}>{props.title}</h2>
         <div className='expense-item__price'>${props.amount}</div>
     </div>
-    <div>
-    <button onClick={() => {console.log('Clicked!')}}>Change Title</button>
-    </div>
-</Card>
+</Card></li>
   );
 }
   
